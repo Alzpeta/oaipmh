@@ -1,0 +1,620 @@
+{
+    "mappings": {
+        "properties": {
+            "metadata": {
+                "properties": {
+                    "dateDefended": {
+                        "type": "keyword"
+                    },
+                    "defended": {
+                        "type": "boolean"
+                    },
+                    "collection": {
+                        "type": "keyword"
+                    },
+                    "title": {
+                        "type": "text"
+                    },
+                    "resourceType": {
+                        "properties": {
+                            "title": {
+                                "type": "object",
+                                "dynamic": true
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "dateIssued": {
+                        "type": "keyword"
+                    },
+                    "dateAvailable": {
+                        "type": "keyword"
+                    },
+                    "dateModified": {
+                        "type": "keyword"
+                    },
+                    "abstract": {
+                        "type": "object",
+                        "properties": {
+                            "lang": {
+                                "type": "keyword"
+                            },
+                            "value": {
+                                "type": "text"
+                            }
+                        }
+                    },
+                    "abstract_cs": {
+                        "type": "text",
+                        "fields": {
+                            "keyword": {
+                                "type": "keyword"
+                            }
+                        }
+                    },
+                    "abstract_en": {
+                        "type": "text",
+                        "fields": {
+                            "keyword": {
+                                "type": "keyword"
+                            }
+                        }
+                    },
+                    "methods": {
+                        "type": "object",
+                        "properties": {
+                            "lang": {
+                                "type": "keyword"
+                            },
+                            "value": {
+                                "type": "text"
+                            }
+                        }
+                    },
+                    "methods_cs": {
+                        "type": "text",
+                        "fields": {
+                            "keyword": {
+                                "type": "keyword"
+                            }
+                        }
+                    },
+                    "methods_en": {
+                        "type": "text",
+                        "fields": {
+                            "keyword": {
+                                "type": "keyword"
+                            }
+                        }
+                    },
+                    "technicalInfo": {
+                        "type": "object",
+                        "properties": {
+                            "lang": {
+                                "type": "keyword"
+                            },
+                            "value": {
+                                "type": "text"
+                            }
+                        }
+                    },
+                    "technicalInfo_cs": {
+                        "type": "text",
+                        "fields": {
+                            "keyword": {
+                                "type": "keyword"
+                            }
+                        }
+                    },
+                    "technicalInfo_en": {
+                        "type": "text",
+                        "fields": {
+                            "keyword": {
+                                "type": "keyword"
+                            }
+                        }
+                    },
+                    "accessRights": {
+                        "properties": {
+                            "title": {
+                                "type": "object",
+                                "dynamic": true
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "version": {
+                        "type": "keyword"
+                    },
+                    "accessibility": {
+                        "type": "object",
+                        "properties": {
+                            "lang": {
+                                "type": "keyword"
+                            },
+                            "value": {
+                                "type": "text"
+                            }
+                        }
+                    },
+                    "accessibility_cs": {
+                        "type": "text",
+                        "fields": {
+                            "keyword": {
+                                "type": "keyword"
+                            }
+                        }
+                    },
+                    "accessibility_en": {
+                        "type": "text",
+                        "fields": {
+                            "keyword": {
+                                "type": "keyword"
+                            }
+                        }
+                    },
+                    "externalLocation": {
+                        "properties": {
+                            "externalLocationURL": {
+                                "type": "keyword"
+                            },
+                            "externalLocationNote": {
+                                "type": "text"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "extent": {
+                        "type": "keyword"
+                    },
+                    "originalRecord": {
+                        "type": "keyword"
+                    },
+                    "degreeGrantor": {
+                        "properties": {
+                            "title": {
+                                "type": "object",
+                                "dynamic": true
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "studyFields": {
+                        "type": "keyword"
+                    },
+                    "additionalTitles": {
+                        "properties": {
+                            "title": {
+                                "type": "object",
+                                "properties": {
+                                    "lang": {
+                                        "type": "keyword"
+                                    },
+                                    "value": {
+                                        "type": "text"
+                                    }
+                                }
+                            },
+                            "title_cs": {
+                                "type": "text",
+                                "fields": {
+                                    "keyword": {
+                                        "type": "keyword"
+                                    }
+                                }
+                            },
+                            "title_en": {
+                                "type": "text",
+                                "fields": {
+                                    "keyword": {
+                                        "type": "keyword"
+                                    }
+                                }
+                            },
+                            "titleType": {
+                                "type": "keyword"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "creators": {
+                        "properties": {
+                            "fullName": {
+                                "type": "keyword"
+                            },
+                            "nameType": {
+                                "type": "keyword"
+                            },
+                            "authorityIdentifiers": {
+                                "properties": {
+                                    "identifier": {
+                                        "type": "keyword"
+                                    },
+                                    "scheme": {
+                                        "type": "keyword"
+                                    }
+                                },
+                                "type": "object"
+                            },
+                            "affiliations": {
+                                "properties": {
+                                    "title": {
+                                        "type": "object",
+                                        "dynamic": true
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "contributors": {
+                        "properties": {
+                            "role": {
+                                "properties": {
+                                    "title": {
+                                        "type": "object",
+                                        "dynamic": true
+                                    }
+                                },
+                                "type": "object"
+                            },
+                            "fullName": {
+                                "type": "keyword"
+                            },
+                            "nameType": {
+                                "type": "keyword"
+                            },
+                            "authorityIdentifiers": {
+                                "properties": {
+                                    "identifier": {
+                                        "type": "keyword"
+                                    },
+                                    "scheme": {
+                                        "type": "keyword"
+                                    }
+                                },
+                                "type": "object"
+                            },
+                            "affiliations": {
+                                "properties": {
+                                    "title": {
+                                        "type": "object",
+                                        "dynamic": true
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "subjects": {
+                        "properties": {
+                            "subjectScheme": {
+                                "type": "keyword"
+                            },
+                            "subject": {
+                                "type": "object",
+                                "properties": {
+                                    "lang": {
+                                        "type": "keyword"
+                                    },
+                                    "value": {
+                                        "type": "text"
+                                    }
+                                }
+                            },
+                            "subject_cs": {
+                                "type": "text",
+                                "fields": {
+                                    "keyword": {
+                                        "type": "keyword"
+                                    }
+                                }
+                            },
+                            "subject_en": {
+                                "type": "text",
+                                "fields": {
+                                    "keyword": {
+                                        "type": "keyword"
+                                    }
+                                }
+                            },
+                            "valueURI": {
+                                "type": "keyword"
+                            },
+                            "classificationCode": {
+                                "type": "keyword"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "publishers": {
+                        "type": "text"
+                    },
+                    "subjectCategories": {
+                        "properties": {
+                            "title": {
+                                "type": "object",
+                                "dynamic": true
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "languages": {
+                        "properties": {
+                            "title": {
+                                "type": "object",
+                                "dynamic": true
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "notes": {
+                        "type": "text"
+                    },
+                    "rights": {
+                        "properties": {
+                            "title": {
+                                "type": "object",
+                                "dynamic": true
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "relatedItems": {
+                        "properties": {
+                            "itemTitle": {
+                                "type": "text"
+                            },
+                            "itemURL": {
+                                "type": "keyword"
+                            },
+                            "itemYear": {
+                                "type": "integer"
+                            },
+                            "itemVolume": {
+                                "type": "keyword"
+                            },
+                            "itemIssue": {
+                                "type": "keyword"
+                            },
+                            "itemStartPage": {
+                                "type": "keyword"
+                            },
+                            "itemEndPage": {
+                                "type": "keyword"
+                            },
+                            "itemPublisher": {
+                                "type": "keyword"
+                            },
+                            "itemRelationType": {
+                                "properties": {
+                                    "title": {
+                                        "type": "object",
+                                        "dynamic": true
+                                    }
+                                },
+                                "type": "object"
+                            },
+                            "itemResourceType": {
+                                "properties": {
+                                    "title": {
+                                        "type": "object",
+                                        "dynamic": true
+                                    }
+                                },
+                                "type": "object"
+                            },
+                            "itemCreators": {
+                                "properties": {
+                                    "fullName": {
+                                        "type": "keyword"
+                                    },
+                                    "nameType": {
+                                        "type": "keyword"
+                                    },
+                                    "authorityIdentifiers": {
+                                        "properties": {
+                                            "identifier": {
+                                                "type": "keyword"
+                                            },
+                                            "scheme": {
+                                                "type": "keyword"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "affiliations": {
+                                        "properties": {
+                                            "title": {
+                                                "type": "object",
+                                                "dynamic": true
+                                            }
+                                        },
+                                        "type": "object"
+                                    }
+                                },
+                                "type": "object"
+                            },
+                            "itemContributors": {
+                                "properties": {
+                                    "role": {
+                                        "properties": {
+                                            "title": {
+                                                "type": "object",
+                                                "dynamic": true
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "fullName": {
+                                        "type": "keyword"
+                                    },
+                                    "nameType": {
+                                        "type": "keyword"
+                                    },
+                                    "authorityIdentifiers": {
+                                        "properties": {
+                                            "identifier": {
+                                                "type": "keyword"
+                                            },
+                                            "scheme": {
+                                                "type": "keyword"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "affiliations": {
+                                        "properties": {
+                                            "title": {
+                                                "type": "object",
+                                                "dynamic": true
+                                            }
+                                        },
+                                        "type": "object"
+                                    }
+                                },
+                                "type": "object"
+                            },
+                            "itemPIDs": {
+                                "properties": {
+                                    "identifier": {
+                                        "type": "keyword"
+                                    },
+                                    "scheme": {
+                                        "type": "keyword"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "fundingReferences": {
+                        "properties": {
+                            "projectID": {
+                                "type": "keyword"
+                            },
+                            "projectName": {
+                                "type": "text"
+                            },
+                            "fundingProgram": {
+                                "type": "text"
+                            },
+                            "funder": {
+                                "properties": {
+                                    "title": {
+                                        "type": "object",
+                                        "dynamic": true
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "geoLocations": {
+                        "properties": {
+                            "geoLocationPlace": {
+                                "type": "keyword"
+                            },
+                            "geoLocationPoint": {
+                                "properties": {
+                                    "pointLongitude": {
+                                        "type": "double"
+                                    },
+                                    "pointLatitude": {
+                                        "type": "double"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "series": {
+                        "properties": {
+                            "seriesTitle": {
+                                "type": "keyword"
+                            },
+                            "seriesVolume": {
+                                "type": "keyword"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "objectIdentifiers": {
+                        "properties": {
+                            "identifier": {
+                                "type": "keyword"
+                            },
+                            "scheme": {
+                                "type": "keyword"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "systemIdentifiers": {
+                        "properties": {
+                            "identifier": {
+                                "type": "keyword"
+                            },
+                            "scheme": {
+                                "type": "keyword"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "events": {
+                        "properties": {
+                            "eventNameOriginal": {
+                                "type": "text"
+                            },
+                            "eventDate": {
+                                "type": "keyword"
+                            },
+                            "eventLocation": {
+                                "properties": {
+                                    "place": {
+                                        "type": "keyword"
+                                    },
+                                    "country": {
+                                        "properties": {
+                                            "title": {
+                                                "type": "object",
+                                                "dynamic": true
+                                            }
+                                        },
+                                        "type": "object"
+                                    }
+                                },
+                                "type": "object"
+                            },
+                            "eventNameAlternate": {
+                                "type": "text"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "collections": {
+                        "type": "keyword"
+                    }
+                },
+                "type": "object"
+            },
+            "id": {
+                "type": "keyword"
+            },
+            "created": {
+                "type": "date"
+            },
+            "updated": {
+                "type": "date"
+            },
+            "$schema": {
+                "type": "keyword"
+            }
+        }
+    }
+}
